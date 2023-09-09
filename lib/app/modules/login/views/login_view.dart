@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:project_get/app/controllers/auth_controller.dart';
 import 'package:project_get/app/routes/app_pages.dart';
@@ -19,6 +18,27 @@ class LoginView extends GetView<LoginController> {
         padding: EdgeInsets.all(10),
         child: ListView(
           children: [
+            // Tambahkan gambar dan teks di sini
+            Image.network(
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/UNIVERSITASTEKNOKRAT.png/640px-UNIVERSITASTEKNOKRAT.png',
+              width: 150, // Sesuaikan dengan lebar yang Anda inginkan.
+              height: 150, // Sesuaikan dengan tinggi yang Anda inginkan.
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Text(
+              'Universitas Teknokrat Indonesia',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 16,
+            ),
+
             TextField(
               controller: controller.cEmail,
               decoration: InputDecoration(

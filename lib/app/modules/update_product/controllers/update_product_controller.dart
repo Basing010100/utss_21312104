@@ -11,17 +11,19 @@ class UpdateProductController extends GetxController {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   Future<DocumentSnapshot<Object?>> getData(String id) async {
-    DocumentReference docRef = firestore.collection("products").doc(id);
+    DocumentReference docRef = firestore.collection("mahasiswa").doc(id);
 
     return docRef.get();
   }
 
   void updateProduct(String nama, String harga, String id) async {
-    DocumentReference productById = firestore.collection("products").doc(id);
+    DocumentReference productById = firestore.collection("mahasiswa").doc(id);
     try {
       await productById.update({
-        "name": nama,
-        "price": harga,
+        "NPM": nama,
+        "NAMA": nama,
+        "ALAMAT": harga,
+
       });
 
       Get.defaultDialog(

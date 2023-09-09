@@ -10,7 +10,7 @@ class AddProductController extends GetxController {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   void addProduct(String nama, String harga) async {
-    CollectionReference products = firestore.collection("products");
+    CollectionReference products = firestore.collection("mahasiswa");
 
     try {
       await products.add({
@@ -19,7 +19,7 @@ class AddProductController extends GetxController {
       });
       Get.defaultDialog(
           title: "Berhasil",
-          middleText: "Berhasil menyimpan data produk",
+          middleText: "Berhasil menyimpan data mahasiswa",
           onConfirm: () {
             cNama.clear();
             cHarga.clear();

@@ -94,6 +94,7 @@ class HomeView extends GetView<HomeController> {
                     "${(listAllDocs[index].data() as Map<String, dynamic>)["name"]}"),
                 subtitle: Text(
                     "${(listAllDocs[index].data() as Map<String, dynamic>)["price"]}"),
+                    
                     trailing: IconButton(
                       onPressed: () => showOption(listAllDocs[index].id), 
                       icon: Icon(Icons.more_vert),

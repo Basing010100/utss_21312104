@@ -10,7 +10,7 @@ class AddProductView extends GetView<AddProductController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add Product'),
+        title: const Text('Add Data Mahasiswa'),
         centerTitle: true,
       ),
       body: Padding(
@@ -21,7 +21,7 @@ class AddProductView extends GetView<AddProductController> {
               controller: controller.cNama,
               autocorrect: false,
               textInputAction: TextInputAction.next,
-              decoration: InputDecoration(labelText: "Nama Produk"),
+              decoration: InputDecoration(labelText: "NPM"),
             ),
             SizedBox(
               height: 10,
@@ -30,10 +30,37 @@ class AddProductView extends GetView<AddProductController> {
               controller: controller.cHarga,
               textInputAction: TextInputAction.done,
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(labelText: "Harga Produk"),
+              decoration: InputDecoration(labelText: "NAMA"),
             ),
             SizedBox(
               height: 30,
+            ),
+            TextField(
+              controller: controller.cNama,
+              autocorrect: false,
+              textInputAction: TextInputAction.next,
+              decoration: InputDecoration(labelText: "ALAMAT"),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            TextField(
+              controller: controller.cNama,
+              autocorrect: false,
+              textInputAction: TextInputAction.next,
+              decoration: InputDecoration(labelText: "PROGRAM STUDI"),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            TextField(
+              controller: controller.cNama,
+              autocorrect: false,
+              textInputAction: TextInputAction.next,
+              decoration: InputDecoration(labelText: "JENIS KELAMIN"),
+            ),
+            SizedBox(
+              height: 10,
             ),
             ElevatedButton(
               onPressed: () => controller.addProduct(

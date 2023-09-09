@@ -29,7 +29,7 @@ class UpdateProductView extends GetView<UpdateProductController> {
               controller: controller.cNama,
               autocorrect: false,
               textInputAction: TextInputAction.next,
-              decoration: InputDecoration(labelText: "Nama Produk"),
+              decoration: InputDecoration(labelText: "NPM"),
             ),
             SizedBox(
               height: 10,
@@ -38,7 +38,34 @@ class UpdateProductView extends GetView<UpdateProductController> {
               controller: controller.cHarga,
               textInputAction: TextInputAction.done,
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(labelText: "Harga Produk"),
+              decoration: InputDecoration(labelText: "NAMA"),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            TextField(
+              controller: controller.cHarga,
+              textInputAction: TextInputAction.done,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(labelText: "ALAMAT"),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            TextField(
+              controller: controller.cHarga,
+              textInputAction: TextInputAction.done,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(labelText: "PROGRAM STUDI"),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            TextField(
+              controller: controller.cHarga,
+              textInputAction: TextInputAction.done,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(labelText: "JENIS KELAMIN"),
             ),
             SizedBox(
               height: 30,
@@ -49,7 +76,7 @@ class UpdateProductView extends GetView<UpdateProductController> {
                 controller.cHarga.text,
                 Get.arguments,
               ),
-              child: Text("Update"),
+              child: Text("SIMPAN"),
             ),
           ],
         ),
